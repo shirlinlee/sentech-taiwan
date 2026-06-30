@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projectRoot,
   },
+  sassOptions: {
+    includePaths: [path.join(projectRoot, "src/styles")],
+  },
 };
 
 export default nextConfig;

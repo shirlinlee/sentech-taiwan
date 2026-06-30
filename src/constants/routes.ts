@@ -16,5 +16,5 @@ export const ROUTES = {
     download: "/support/download",
     notice: "/support/notice",
   },
-  contact: "/contact",
+  certification: "/certification",
 } as const;

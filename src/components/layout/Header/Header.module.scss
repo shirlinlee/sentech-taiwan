@@ -1,0 +1,38 @@
+@use "../../../styles/variables.scss" as *;
+
+.header {
+  background-color: $color-white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  @media (min-width: $breakpoint-lg) {
+	border-bottom: 1px solid $color-border;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.logo {
+  order: 1;
+  flex-shrink: 0;
+}
+
+.menuButton {
+  order: 2;
+  display: flex;
+  align-items: center;
+  color: $color-secondary;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}

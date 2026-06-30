@@ -1,0 +1,125 @@
+@use "../../../styles/variables.scss" as *;
+
+.navigation {
+  order: 3;
+  display: none;
+  width: 100%;
+  flex-basis: 100%;
+  font-size: $font-size-medium;
+
+  @media (min-width: $breakpoint-lg) {
+    order: 2;
+    display: flex;
+    width: auto;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: flex-end;
+  }
+}
+
+.navigationOpen {
+  display: block;
+
+  @media (min-width: $breakpoint-lg) {
+    display: flex;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 20px 0 0 0;
+  border-top: 1px solid $color-border;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 0;
+    border-top: none;
+    width: 100%;
+    margin: 0;
+    justify-content: end;
+  }
+  .menuItem {
+    list-style: none;
+    padding: 8px 20px;
+    @media (min-width: $breakpoint-lg) {
+      padding: 8px 0;
+    }
+  }
+  .menuItemHasChildren {
+    @media (min-width: $breakpoint-lg) {
+      position: relative;
+    }
+  }
+}
+
+
+
+.link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: $color-secondary;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.submenu {
+  // padding-top: 0.5rem;
+  // padding-left: 1rem;
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12rem;
+    padding-top: 16px;
+    padding-left: 0;
+    z-index: 10;
+  }
+}
+
+.menuItemHasChildren:hover .submenu,
+.menuItemHasChildren:focus-within .submenu {
+  @media (min-width: $breakpoint-lg) {
+    display: block;
+  }
+}
+
+.submenuList {
+  margin: 0;
+  padding: 0.75rem 0;
+  list-style: none;
+  background-color: $color-white;
+  
+
+  @media (min-width: $breakpoint-lg) {
+    border-top: 3px solid $color-accent;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
+  }
+}
+
+.submenuItem {
+  list-style: none;
+}
+
+.submenuLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: $color-muted;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  @media (min-width: $breakpoint-lg) {
+    padding: 0.5rem 1.5rem;
+  }
+}
