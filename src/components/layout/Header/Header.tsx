@@ -24,7 +24,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles.wrapper}>
+        <div className={styles.inner}>
           <Link href={ROUTES.home} className={styles.logo}>
             <Image
               src={mainLogo.src}
@@ -40,6 +40,7 @@ export function Header() {
               styles_navigation.navigation,
               isMenuOpen && styles_navigation.navigationOpen,
             )}
+            onNavigate={() => setIsMenuOpen(false)}
           />
 
           <button

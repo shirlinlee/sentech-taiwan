@@ -1,0 +1,30 @@
+@use "../../../styles/variables.scss" as *;
+
+.root {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  height: 100%;
+  overflow: hidden;
+}
+
+.backToTop {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 20;
+
+  @media (min-width: $breakpoint-md) {
+    right: 2rem;
+    bottom: 2rem;
+  }
+}

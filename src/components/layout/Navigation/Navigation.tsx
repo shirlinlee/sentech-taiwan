@@ -7,9 +7,10 @@ import styles from "./Navigation.module.scss";
 
 type NavigationProps = {
   className?: string;
+  onNavigate?: () => void;
 };
 
-export function Navigation({ className }: NavigationProps) {
+export function Navigation({ className, onNavigate }: NavigationProps) {
   return (
     <nav className={className} aria-label="主選單">
       <ul className={styles.menu}>
@@ -21,7 +22,11 @@ export function Navigation({ className }: NavigationProps) {
               item.children && styles.menuItemHasChildren,
             )}
           >
-            <Link href={item.href} className={styles.link}>
+            <Link
+              href={item.href}
+              className={styles.link}
+              onClick={onNavigate}
+            >
               {item.label}
             </Link>
 
@@ -30,7 +35,11 @@ export function Navigation({ className }: NavigationProps) {
                 <ul className={styles.submenuList}>
                   {item.children.map((child) => (
                     <li key={child.href} className={styles.submenuItem}>
-                      <Link href={child.href} className={styles.submenuLink}>
+                      <Link
+                        href={child.href}
+                        className={styles.submenuLink}
+                        onClick={onNavigate}
+                      >
                         {child.label}
                       </Link>
                     </li>
