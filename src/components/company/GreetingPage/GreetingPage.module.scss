@@ -1,0 +1,75 @@
+@use "../../../styles/variables.scss" as *;
+
+.article {
+  width: 100%;
+}
+
+.heroFrame {
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  border-radius: $radius-container;
+  background-color: $color-secondary-light;
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.body {
+  flex-direction: column;
+  display: flex;
+  gap: 16px;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: $color-secondary;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 200px;
+}
+
+.highlight {
+  color: $color-accent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  gap: 16px;
+}
+
+.paragraph {
+  margin: 0;
+  font-size: $font-size-medium;
+  line-height: 1.9;
+  color: $color-muted;
+}
+
+.signature {
+  margin: 0.5rem 0 0;
+  font-size: $font-size-medium;
+  font-weight: 600;
+  color: $color-secondary;
+  letter-spacing: 0.02em;
+
+  strong {
+    font-weight: 700;
+  }
+}

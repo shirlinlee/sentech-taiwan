@@ -1,0 +1,1 @@
+export { PageBackToTop } from "./PageBackToTop";

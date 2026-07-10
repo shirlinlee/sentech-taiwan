@@ -30,7 +30,7 @@ export function HeroSection({ data, onScrollDown }: HeroSectionProps) {
       <div className={styles.overlay} aria-hidden="true" />
 
       <div className={styles.content}>
-        <Link href={link as Url} className={styles.badge}>
+        <Link href={link} className={styles.badge}>
           {badge} 
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path

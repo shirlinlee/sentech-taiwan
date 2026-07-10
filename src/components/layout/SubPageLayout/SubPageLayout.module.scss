@@ -1,0 +1,19 @@
+@use "../../../styles/variables.scss" as *;
+
+.root {
+  min-height: 100dvh;
+  padding-top: 56px;
+  background-color: $color-white;
+
+  @media (min-width: $breakpoint-lg) {
+    padding-top: 72px;
+  }
+}
+
+.content {
+  padding-block: 1.5rem 4rem;
+
+  @media (min-width: $breakpoint-md) {
+    padding-block: 2rem 5rem;
+  }
+}

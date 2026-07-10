@@ -4,7 +4,7 @@ import type { NavigationItem } from "@/types/navigation";
 export const navigation: NavigationItem[] = [
   {
     label: "公司介紹",
-    href: ROUTES.company.index,
+    href: ROUTES.company.greeting,
     children: [
       { label: "董事長致詞", href: ROUTES.company.greeting },
       { label: "公司沿革", href: ROUTES.company.history },
