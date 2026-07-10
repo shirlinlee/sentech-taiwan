@@ -56,28 +56,32 @@
   }
 
   .productImageContainer {
-    width: 10%;
+      width: 40%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -75%);
 
     @media (min-width: $breakpoint-md) {
-      position: absolute;
       top: 50%;
       left: 0;
       z-index: 1;
       transform: translate(-50%, -45%);
       object-fit: contain;
+      width: 280px;
 
       // Combine local module class with global product id class from data
-      &:global(.alx3000) {
-        width: 210px;
-      }
+      // &:global(.alx3000) {
+      //   width: 210px;
+      // }
 
-      &:global(.alp-1) {
-        width: 290px;
-      }
+      // &:global(.alp-1) {
+      //   width: 290px;
+      // }
 
-      &:global(.iblow10-pro) {
-        width: 350px;
-      }
+      // &:global(.iblow10-pro) {
+      //   width: 350px;
+      // }
     }
   }
 }

@@ -3,7 +3,7 @@ import type { HomePageData } from "@/types/home";
 
 export const homePageData: HomePageData = {
   hero: {
-    badge: "View ALCOSCAN ALX3000 ⇀",
+    badge: "View ALCOSCAN ALX3000",
     link: ROUTES.products.detail("alx3000"),
     videoSrc: "/videos/hero.mp4",
     videoPoster: "/images/home/hero-poster.png",

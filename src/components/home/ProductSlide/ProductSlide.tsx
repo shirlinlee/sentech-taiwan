@@ -33,7 +33,7 @@ export function ProductSlide({ data }: ProductSlideProps) {
 			<p className={styles.description}>{description}</p>
 			<Link href={href} className={styles.cta}>
 			View more
-			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width={24}>
 				<path
 				d="M5 12h14M13 6l6 6-6 6"
 				stroke="currentColor"

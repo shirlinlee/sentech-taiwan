@@ -17,4 +17,5 @@ export const ROUTES = {
     notice: "/support/notice",
   },
   certification: "/certification",
+  privacy: "/privacy",
 } as const;

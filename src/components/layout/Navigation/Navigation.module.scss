@@ -116,7 +116,6 @@
   background-color: $color-white;
 
   @media (min-width: $breakpoint-lg) {
-    padding: 0.75rem 0;
     border-top: 3px solid $color-accent;
     box-shadow: 0 4px 16px rgb(0 0 0 / 0.1);
   }
@@ -124,6 +123,10 @@
 
 .submenuItem {
   list-style: none;
+  line-height: 40px;
+  &:hover {
+    background: $color-primary-light;
+  }
 }
 
 .submenuLink {

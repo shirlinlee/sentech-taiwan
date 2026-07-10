@@ -7,6 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { HomePageData } from "@/types/home";
 
+import { Footer } from "@/components/layout/Footer";
+import { footerData } from "@/data/footer";
+
 import { BackToTopButton } from "../BackToTopButton";
 import { HeroSection } from "../HeroSection";
 import { ProductCarousel } from "../ProductCarousel";
@@ -33,7 +36,7 @@ export function HomeFullPage({ data }: HomeFullPageProps) {
         className={styles.swiper}
         modules={[Mousewheel, Keyboard]}
         direction="vertical"
-        slidesPerView={1}
+        slidesPerView="auto"
         speed={800}
         mousewheel={{
           forceToAxis: true,
@@ -48,16 +51,25 @@ export function HomeFullPage({ data }: HomeFullPageProps) {
           setActiveIndex(swiper.activeIndex);
         }}
       >
-        <SwiperSlide className={styles.slide}>
+        <SwiperSlide className={styles.slideHero}>
           <HeroSection data={data.hero} onScrollDown={() => slideTo(1)} />
         </SwiperSlide>
 
-        <SwiperSlide className={styles.slide}>
-          <ProductCarousel products={data.products} />
+        <SwiperSlide className={styles.slideProducts}>
+          <ProductCarousel
+            products={data.products}
+            onScrollDown={() => slideTo(2)}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide className={styles.slideFooter}>
+          <div className={styles.footerSlide}>
+            <Footer data={footerData} />
+          </div>
         </SwiperSlide>
       </Swiper>
 
-      {activeIndex === 1 ? (
+      {activeIndex >= 1 ? (
         <BackToTopButton
           className={styles.backToTop}
           onClick={() => slideTo(0)}
