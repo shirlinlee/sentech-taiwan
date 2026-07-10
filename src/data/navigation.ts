@@ -6,7 +6,7 @@ export const navigation: NavigationItem[] = [
     label: "公司介紹",
     href: ROUTES.company.greeting,
     children: [
-      { label: "董事長致詞", href: ROUTES.company.greeting },
+      { label: "品牌介紹", href: ROUTES.company.greeting },
       { label: "公司沿革", href: ROUTES.company.history },
       { label: "組織架構", href: ROUTES.company.organization },
       { label: "公司據點", href: ROUTES.company.location },
