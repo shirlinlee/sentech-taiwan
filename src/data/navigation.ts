@@ -16,8 +16,8 @@ export const navigation: NavigationItem[] = [
     label: "產品介紹",
     href: ROUTES.products.index,
     children: [
-      { label: "酒測器", href: ROUTES.products.detail("breathalyzer") },
-      { label: "氣體感測器", href: ROUTES.products.detail("gas-sensor") },
+      { label: "酒測器", href: ROUTES.products.breathalyzer },
+      { label: "氣體感測器", href: ROUTES.products.gasSensor },
     ],
   },
   {

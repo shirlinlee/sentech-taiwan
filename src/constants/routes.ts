@@ -8,6 +8,8 @@ export const ROUTES = {
   },
   products: {
     index: "/products",
+    breathalyzer: "/products/breathalyzer",
+    gasSensor: "/products/gas-sensor",
     detail: (slug: string) => `/products/${slug}`,
   },
   support: {
