@@ -21,6 +21,11 @@ export const gasSensorPageData: ProductListPageData = {
         src: "/images/product/STK-4000/stk4000.png",
         alt: "STK-4000",
       },
+      summary: "VOC 氣體感測器，適用於空氣品質監測。",
+      description: [
+        "目標氣體：一般空氣污染物。",
+        "應用：空氣品質控制。",
+      ],
     },
   ],
 };

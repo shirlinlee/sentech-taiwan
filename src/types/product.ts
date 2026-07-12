@@ -15,11 +15,25 @@ export type ProductListItem = {
   id: string;
   slug: string;
   name: string;
+  brand?: string;
   categoryId?: ProductCategoryId;
   image: {
     src: string;
     alt: string;
   };
+  summary?: string;
+  description?: string[];
+  gallery?: {
+    src: string;
+    alt: string;
+  }[];
+  pdf?: string;
+  specifications?: {
+    label: string;
+    value: string;
+  }[];
+  heroVideo?: string;
+  featured?: boolean;
 };
 
 export type ProductListPageData = {
@@ -33,4 +47,17 @@ export type ProductListPageData = {
   };
   categories?: ProductCategory[];
   products: ProductListItem[];
+};
+
+export type ProductLineId = "breathalyzer" | "gas-sensor";
+
+export type ProductDetailData = {
+  product: ProductListItem;
+  line: {
+    id: ProductLineId;
+    title: string;
+    href: string;
+    heroImage: ProductListPageData["heroImage"];
+    categories?: ProductCategory[];
+  };
 };
