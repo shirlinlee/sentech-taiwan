@@ -5,8 +5,12 @@ import { fileURLToPath } from "url";
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   turbopack: {
     root: projectRoot,
+  },
+  sassOptions: {
+    includePaths: [path.join(projectRoot, "src/styles")],
   },
 };
 

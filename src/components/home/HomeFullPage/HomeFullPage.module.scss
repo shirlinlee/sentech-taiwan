@@ -1,0 +1,53 @@
+@use "../../../styles/variables.scss" as *;
+
+// 每一屏高度在這裡自訂
+$slide-hero-height: 100dvh;
+$slide-products-height: 100dvh;
+$slide-footer-height: auto;
+
+.root {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+// slidesPerView="auto" 時，每一屏都要各自指定 height
+.slideHero {
+  height: $slide-hero-height;
+  overflow: hidden;
+}
+
+.slideProducts {
+  height: $slide-products-height;
+  overflow: hidden;
+}
+
+.slideFooter {
+  height: $slide-footer-height;
+}
+
+.footerSlide {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  // min-height: 100%;
+  background-color: $color-white;
+}
+
+.backToTop {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 20;
+
+  @media (min-width: $breakpoint-md) {
+    right: 2rem;
+    bottom: 2rem;
+  }
+}

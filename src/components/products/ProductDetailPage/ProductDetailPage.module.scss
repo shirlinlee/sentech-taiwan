@@ -1,0 +1,298 @@
+@use "../../../styles/variables.scss" as *;
+
+.article {
+  width: 100%;
+}
+
+.heroFrame {
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: $radius-container;
+  background-color: $color-secondary-light;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 2rem;
+  }
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: $color-white;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.categoryNav {
+  margin-bottom: 2rem;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  &:not(:last-child)::after {
+    content: "·";
+    margin-inline: 0.75rem;
+    color: $color-border;
+    font-weight: 700;
+  }
+}
+
+.categoryLink {
+  padding: 0.25rem 0;
+  font-size: $font-size-small;
+  font-weight: 600;
+  color: $color-muted;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-medium;
+  }
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.categoryLinkActive {
+  color: $color-accent;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.overview {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.gallery {
+  width: 100%;
+}
+
+.galleryFrame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: 1.5rem;
+  border: 1px solid $color-border;
+  background-color: $color-white;
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.galleryArrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid $color-border;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: $color-secondary;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &:hover {
+    background-color: $color-accent;
+    border-color: $color-accent;
+    color: $color-white;
+  }
+}
+
+.galleryArrowPrev {
+  left: 0.75rem;
+}
+
+.galleryArrowNext {
+  right: 0.75rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.brand {
+  margin: 0 0 0.5rem;
+  font-size: $font-size-medium;
+  font-weight: 700;
+  color: $color-accent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.name {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: $color-secondary;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.descriptionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.descriptionItem {
+  position: relative;
+  margin: 0 0 0.75rem;
+  padding-left: 1rem;
+  font-size: $font-size-medium;
+  line-height: 1.8;
+  color: $color-muted;
+
+  &::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: $color-muted;
+  }
+}
+
+.summary {
+  margin: 0;
+  font-size: $font-size-medium;
+  line-height: 1.8;
+  color: $color-muted;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8rem;
+  padding: 0.7rem 1.25rem;
+  border: 1px solid $color-accent;
+  border-radius: 999px;
+  background-color: $color-white;
+  color: $color-accent;
+  font-size: $font-size-small;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-white;
+  }
+}
+
+.actionButtonDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.specs {
+  padding-bottom: 2rem;
+}
+
+.specsTitle {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid $color-secondary;
+  font-size: $font-size-large;
+  font-weight: 700;
+  color: $color-secondary;
+  letter-spacing: 0.06em;
+}
+
+.specsList {
+  margin: 0;
+  padding: 0;
+}
+
+.specsRow {
+  display: grid;
+  gap: 0.5rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid $color-border;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+.specsLabel,
+.specsValue {
+  margin: 0;
+  font-size: $font-size-medium;
+  line-height: 1.7;
+}
+
+.specsLabel {
+  color: $color-muted;
+  font-weight: 500;
+}
+
+.specsValue {
+  color: $color-secondary;
+}

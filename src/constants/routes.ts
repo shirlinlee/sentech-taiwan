@@ -1,7 +1,6 @@
 export const ROUTES = {
   home: "/",
   company: {
-    index: "/company",
     greeting: "/company/greeting",
     history: "/company/history",
     organization: "/company/organization",
@@ -9,6 +8,8 @@ export const ROUTES = {
   },
   products: {
     index: "/products",
+    breathalyzer: "/products/breathalyzer",
+    gasSensor: "/products/gas-sensor",
     detail: (slug: string) => `/products/${slug}`,
   },
   support: {
@@ -16,5 +17,6 @@ export const ROUTES = {
     download: "/support/download",
     notice: "/support/notice",
   },
-  contact: "/contact",
+  certification: "/certification",
+  privacy: "/privacy",
 } as const;
