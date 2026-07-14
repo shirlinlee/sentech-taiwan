@@ -293,7 +293,7 @@ export const breathalyzerPageData: ProductListPageData = {
       id: "alc-1",
       slug: "alc-1",
       name: "ALC-1",
-      categoryId: "system",
+      categoryId: "screening",
       image: {
         src: "/images/product/ALC-1/ALC-1_maincopy.png",
         alt: "ALC-1",
@@ -362,7 +362,7 @@ export const breathalyzerPageData: ProductListPageData = {
       id: "alc-2",
       slug: "alc-2",
       name: "ALC-2",
-      categoryId: "system",
+      categoryId: "screening",
       image: {
         src: "/images/product/ALC-2/ALC-2_maincopy.png",
         alt: "ALC-2",

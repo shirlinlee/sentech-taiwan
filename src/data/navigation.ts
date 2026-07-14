@@ -8,8 +8,8 @@ export const navigation: NavigationItem[] = [
     children: [
       { label: "品牌介紹", href: ROUTES.company.greeting },
       { label: "公司沿革", href: ROUTES.company.history },
-      { label: "組織架構", href: ROUTES.company.organization },
-      { label: "公司據點", href: ROUTES.company.location },
+      // { label: "組織架構", href: ROUTES.company.organization },
+      // { label: "公司據點", href: ROUTES.company.location },
     ],
   },
   {

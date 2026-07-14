@@ -26,6 +26,12 @@ export const gasSensorPageData: ProductListPageData = {
         "目標氣體：一般空氣污染物。",
         "應用：空氣品質控制。",
       ],
+      specifications: [
+        { label: "可偵測氣體", value: "VOC" },
+        { label: "操作電壓", value: "DC 5V" },
+        { label: "應用", value: "Air cleaner" },
+        { label: "備註", value: "RoHs" },
+      ],
     },
   ],
 };
