@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Container } from "@/components/ui/Container";
@@ -10,6 +9,8 @@ import type { ProductDetailData } from "@/types/product";
 import { cn } from "@/utils/cn";
 
 import styles from "./ProductDetailPage.module.scss";
+
+const GALLERY_AUTOPLAY_MS = 3000;
 
 type ProductDetailPageProps = {
   data: ProductDetailData;
@@ -22,8 +23,9 @@ export function ProductDetailPage({ data }: ProductDetailPageProps) {
       ? product.gallery
       : [product.image];
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const activeImage = gallery[activeImageIndex] ?? product.image;
-  const brand = product.brand ?? (line.id === "breathalyzer" ? "ALCOSCAN" : undefined);
+  const [isHoveringGallery, setIsHoveringGallery] = useState(false);
+  const brand =
+    product.brand ?? (line.id === "breathalyzer" ? "ALCOSCAN" : undefined);
   const hasMultipleImages = gallery.length > 1;
 
   const showPreviousImage = () => {
@@ -38,6 +40,20 @@ export function ProductDetailPage({ data }: ProductDetailPageProps) {
     );
   };
 
+  useEffect(() => {
+    if (!hasMultipleImages || isHoveringGallery) {
+      return;
+    }
+
+    const timer = window.setInterval(() => {
+      setActiveImageIndex((index) =>
+        index === gallery.length - 1 ? 0 : index + 1,
+      );
+    }, GALLERY_AUTOPLAY_MS);
+
+    return () => window.clearInterval(timer);
+  }, [gallery.length, hasMultipleImages, isHoveringGallery]);
+
   return (
     <article className={styles.article}>
       <Container>
@@ -51,15 +67,31 @@ export function ProductDetailPage({ data }: ProductDetailPageProps) {
 
         <section className={styles.overview}>
           <div className={styles.gallery}>
-            <div className={styles.galleryFrame}>
-              <Image
-                src={activeImage.src}
-                alt={activeImage.alt}
-                width={640}
-                height={640}
-                className={styles.galleryImage}
-                priority
-              />
+            <div
+              className={styles.galleryFrame}
+              onMouseEnter={() => setIsHoveringGallery(true)}
+              onMouseLeave={() => setIsHoveringGallery(false)}
+            >
+              <div className={styles.gallerySlides} aria-live="polite">
+                {gallery.map((image, index) => (
+                  <div
+                    key={`${image.src}-${index}`}
+                    className={cn(
+                      styles.gallerySlide,
+                      index === activeImageIndex && styles.gallerySlideActive,
+                    )}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={640}
+                      height={640}
+                      className={styles.galleryImage}
+                      priority={index === 0}
+                    />
+                  </div>
+                ))}
+              </div>
 
               {hasMultipleImages ? (
                 <>
@@ -115,12 +147,6 @@ export function ProductDetailPage({ data }: ProductDetailPageProps) {
             ) : product.summary ? (
               <p className={styles.summary}>{product.summary}</p>
             ) : null}
-
-            {/* <div className={styles.actions}>
-              <Link href={line.href} className={styles.actionButton}>
-                返回列表
-              </Link>
-            </div> */}
           </div>
         </section>
 
