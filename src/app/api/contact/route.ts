@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createElement } from "react";
 import { resend } from "@/lib/resend";
 import ContactEmail from "@/email/ContactEmail";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 type ContactPayload = {
   category?: string;
@@ -19,6 +20,7 @@ const categoryLabelMap: Record<string, string> = {
   service: "服務",
 };
 
+
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -32,11 +34,26 @@ export async function POST(request: Request) {
     const email = body.email?.trim() ?? "";
     const phone = body.phone?.trim() ?? "";
     const message = body.message?.trim() ?? "";
+    const recaptchaToken = body.recaptchaToken ?? "";
 
-    if (!category || !subject || !name || !email || !phone || !message) {
+    if (!category || !subject || !name || !email || !phone || !message || !recaptchaToken) {
       return NextResponse.json(
         { success: false, error: "請完整填寫所有必填欄位" },
         { status: 400 },
+      );
+    }
+
+    const isHuman = await verifyRecaptcha(recaptchaToken);
+
+    if (!isHuman) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "reCAPTCHA 驗證失敗，請重新驗證。",
+        },
+        {
+          status: 400,
+        },
       );
     }
 

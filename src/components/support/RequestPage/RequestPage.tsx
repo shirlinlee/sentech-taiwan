@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import Swal from "sweetalert2";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Container } from "@/components/ui/Container";
@@ -29,7 +30,7 @@ const initialValues: RequestFormValues = {
   email: "abc123@gmail.com",
   phone: "0912345678",
   message: "訊息測試",
-  agreed: true,
+  agreed: false,
 };
 
 type RequestPageProps = {
@@ -42,6 +43,19 @@ export function RequestPage({ data }: RequestPageProps) {
   const [values, setValues] = useState<RequestFormValues>(initialValues);
   const [errors, setErrors] = useState<RequestFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
+
+  const isFormComplete =
+    Boolean(values.category) &&
+    Boolean(values.subject.trim()) &&
+    Boolean(values.name.trim()) &&
+    Boolean(values.email.trim()) &&
+    /^\d+$/.test(values.phone.trim()) &&
+    Boolean(values.message.trim()) &&
+    values.agreed &&
+    isRecaptchaVerified;
 
   const updateField = <K extends keyof RequestFormValues>(
     field: K,
@@ -92,6 +106,19 @@ export function RequestPage({ data }: RequestPageProps) {
       return;
     }
 
+    const recaptchaToken = recaptchaRef.current?.getValue();
+
+    if (!recaptchaToken) {
+      await Swal.fire({
+        icon: "warning",
+        title: "請完成機器人驗證",
+        confirmButtonText: "確定",
+        confirmButtonColor: "#e85d04",
+      });
+
+      return;
+    }
+
     setErrors({});
     setIsSubmitting(true);
 
@@ -108,6 +135,7 @@ export function RequestPage({ data }: RequestPageProps) {
           email: values.email.trim(),
           phone: values.phone.trim(),
           message: values.message.trim(),
+          recaptchaToken,
         }),
       });
 
@@ -145,12 +173,16 @@ export function RequestPage({ data }: RequestPageProps) {
       });
     } finally {
       setIsSubmitting(false);
+      setIsRecaptchaVerified(false);
+      recaptchaRef.current?.reset();
     }
   };
 
   const handleCancel = () => {
     setValues(initialValues);
     setErrors({});
+    setIsRecaptchaVerified(false);
+    recaptchaRef.current?.reset();
   };
 
   return (
@@ -361,11 +393,28 @@ export function RequestPage({ data }: RequestPageProps) {
             ) : null}
           </section>
 
+          {recaptchaSiteKey ? (
+            <div className={styles.recaptcha}>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={recaptchaSiteKey}
+                hl="zh-TW"
+                onChange={(token) => setIsRecaptchaVerified(Boolean(token))}
+                onExpired={() => setIsRecaptchaVerified(false)}
+                onErrored={() => setIsRecaptchaVerified(false)}
+              />
+            </div>
+          ) : (
+            <p className={styles.error}>
+              reCAPTCHA 尚未設定，請確認 NEXT_PUBLIC_RECAPTCHA_SITE_KEY。
+            </p>
+          )}
+
           <div className={styles.actions}>
             <button
               type="submit"
               className={styles.submitButton}
-              disabled={isSubmitting}
+              disabled={!isFormComplete || isSubmitting}
             >
               {isSubmitting ? "送出中…" : labels.submit}
             </button>

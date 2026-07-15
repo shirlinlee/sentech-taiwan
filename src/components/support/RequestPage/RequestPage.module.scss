@@ -222,6 +222,7 @@
     background-color 0.2s ease,
     color 0.2s ease,
     border-color 0.2s ease;
+  
 }
 
 .submitButton {
@@ -229,7 +230,12 @@
   background-color: $color-white;
   color: $color-accent;
 
-  &:hover {
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
     background-color: $color-accent;
     color: $color-white;
   }
@@ -243,5 +249,11 @@
   &:hover {
     background-color: #7f7f7f;
     border-color: #7f7f7f;
+  }
+}
+
+.recaptcha {
+  div {
+    margin: 0 auto;
   }
 }
