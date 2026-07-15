@@ -1,4 +1,4 @@
-# SENTECH Korea 台灣
+# SENTECH 台灣
 
 Corporate website for the Taiwan distributor of SENTECH Korea.
 

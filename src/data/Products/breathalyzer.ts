@@ -278,12 +278,22 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "LED 搭配三段式蜂鳴警示",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/ALP-1/ALP-1_maincopy.png",
+          alt: "ALP-1 主圖",
+        },
+        {
+          src: "/images/product/ALP-1/ALP-1_subcopy.png",
+          alt: "ALP-1 副圖",
+        },
+      ],
     },
     {
       id: "alc-1",
       slug: "alc-1",
       name: "ALC-1",
-      categoryId: "system",
+      categoryId: "screening",
       image: {
         src: "/images/product/ALC-1/ALC-1_maincopy.png",
         alt: "ALC-1",
@@ -337,12 +347,22 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "需使用專用吹嘴",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/ALC-1/ALC-1_maincopy.png",
+          alt: "ALC-1 主圖",
+        },
+        {
+          src: "/images/product/ALC-1/ALC-1_subcopy.png",
+          alt: "ALC-1 副圖",
+        },
+      ],
     },
     {
       id: "alc-2",
       slug: "alc-2",
       name: "ALC-2",
-      categoryId: "system",
+      categoryId: "screening",
       image: {
         src: "/images/product/ALC-2/ALC-2_maincopy.png",
         alt: "ALC-2",
@@ -397,6 +417,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "感測器保固",
           value: "1 年（不含人為損壞）",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/ALC-2/ALC-2_maincopy.png",
+          alt: "ALC-2 主圖",
+        },
+        {
+          src: "/images/product/ALC-2/ALC-2_subcopy.png",
+          alt: "ALC-2 副圖",
         },
       ],
     },
@@ -584,6 +614,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE、FDA 510K Listed、DOT、Australian Standard",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL6000-Lite/AL6000Lite_maincopy.png",
+          alt: "AL6000 Lite 主圖",
+        },
+        {
+          src: "/images/product/AL6000-Lite/AL6000Lite_subcopy.png",
+          alt: "AL6000 Lite 副圖",
+        },
+      ],
     },
     
     {
@@ -647,6 +687,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL4000/AL4000_maincopy.png",
+          alt: "AL4000 主圖",
+        },
+        {
+          src: "/images/product/AL4000/AL4000_subcopy.png",
+          alt: "AL4000 副圖",
+        },
+      ],
     },
     {
       id: "al2500-elite",
@@ -705,7 +755,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE",
         },
       ],
-      
+      gallery: [
+        {
+          src: "/images/product/AL2500elite/AL2500Elite_maincopy.png",
+          alt: "AL2500 Elite 主圖",
+        },
+        {
+          src: "/images/product/AL2500elite/AL2500Elite_subcopy.png",
+          alt: "AL2500 Elite 副圖",
+        },
+      ],
     },
     {
       id: "al9000-lite",
@@ -823,6 +882,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "認證",
           value: "CE",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/AL9000/AL9000_maincopy.png",
+          alt: "AL9000 主圖",
+        },
+        {
+          src: "/images/product/AL9000/AL9000-subcopy.png",
+          alt: "AL9000 副圖",
         },
       ],
     },
@@ -952,6 +1021,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "LED 警示燈、電量顯示、校正提醒、鎖定功能",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/iblow10-C/iblow10-C_400_550.png",
+          alt: "iblow10-C 主圖",
+        },
+        {
+          src: "/images/product/iblow10-C/iblow10-C_400_550_2.png",
+          alt: "iblow10-C 副圖",
+        },
+      ],
     },
     {
       id: "al1100",
@@ -1010,6 +1089,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE、KRISS、RTSA",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL1100/AL1100_maincopy.png",
+          alt: "AL1100 主圖",
+        },
+        {
+          src: "/images/product/AL1100/AL1100_subcopy.png",
+          alt: "AL1100 副圖",
+        },
+      ],
     },
     {
       id: "iblow10",
@@ -1066,6 +1155,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "產品特性",
           value: "LED 照明、校正提醒、PC 校正保護、電量顯示",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/iblow10/iblow10_maincopy.png",
+          alt: "iblow10 主圖",
+        },
+        {
+          src: "/images/product/iblow10/iblow10_subcopy.png",
+          alt: "iblow10 副圖",
         },
       ],
     },
@@ -1128,6 +1227,16 @@ export const breathalyzerPageData: ProductListPageData = {
           label: "附加功能",
           value:
             "藍牙、多語言、Web 校正保護、LED 信號棒、磁吸固定",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/iblow10-Pro/maincopy.png",
+          alt: "iblow10 Pro 主圖",
+        },
+        {
+          src: "/images/product/iblow10-Pro/subcopy.png",
+          alt: "iblow10 Pro 副圖",
         },
       ],
     },
@@ -1195,6 +1304,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "校正",
           value: "1000 次使用或 6 個月",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/AL8000/AL8000_maincopy.png",
+          alt: "AL8000 主圖",
+        },
+        {
+          src: "/images/product/AL8000/AL8000_subcopy.png",
+          alt: "AL8000 副圖",
         },
       ],
     },
@@ -1327,6 +1446,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE、FDA 510K Listed、DOT、Australian Standard",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL6000/AL6000_maincopy.png",
+          alt: "AL6000 主圖",
+        },
+        {
+          src: "/images/product/AL6000/AL6000_subcopy.png",
+          alt: "AL6000 副圖",
+        },
+      ],
     },
     {
       id: "al7000",
@@ -1383,6 +1512,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "認證",
           value: "CE、DOT",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/AL7000/AL7000_maincopy.png",
+          alt: "AL7000 主圖",
+        },
+        {
+          src: "/images/product/AL7000/AL7000_subcopy.png",
+          alt: "AL7000 副圖",
         },
       ],
     },
@@ -1452,6 +1591,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "1000 次使用或 6 個月",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL8800/AL8800_maincopy.png",
+          alt: "AL8800 主圖",
+        },
+        {
+          src: "/images/product/AL8800/AL8800_subcopy.png",
+          alt: "AL8800 副圖",
+        },
+      ],
     },
     {
       id: "al3100",
@@ -1459,7 +1608,7 @@ export const breathalyzerPageData: ProductListPageData = {
       name: "AL3100",
       categoryId: "screening",
       image: {
-        src: "/images/product/AL3100/AL3100영어_maincopy.png",
+        src: "/images/product/AL3100/AL3100_maincopy.png",
         alt: "AL3100",
       },
       summary: "快速量測呼氣酒精並自動換算 BAC 的酒精測試儀。",
@@ -1508,6 +1657,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "認證",
           value: "CE",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/AL3100/AL3100_maincopy.png",
+          alt: "AL3100 主圖",
+        },
+        {
+          src: "/images/product/AL3100/AL3100_subcopy.png",
+          alt: "AL3100 副圖",
         },
       ],
     },
@@ -1567,6 +1726,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL5500/AL5500_maincopy.png",
+          alt: "AL5500 主圖",
+        },
+        {
+          src: "/images/product/AL5500/AL5500_subcopy.png",
+          alt: "AL5500 副圖",
+        },
+      ],
     },
     {
       id: "al2500",
@@ -1622,6 +1791,16 @@ export const breathalyzerPageData: ProductListPageData = {
           value: "CE、FDA 510K",
         },
       ],
+      gallery: [
+        {
+          src: "/images/product/AL2500/AL2500_maincopy.png",
+          alt: "AL2500 主圖",
+        },
+        {
+          src: "/images/product/AL2500/AL2500_subcopy.png",
+          alt: "AL2500 副圖",
+        },
+      ],
     },
     {
       id: "al3200",
@@ -1629,7 +1808,7 @@ export const breathalyzerPageData: ProductListPageData = {
       name: "AL3200",
       categoryId: "screening",
       image: {
-        src: "/images/product/AL3200/AL3200영어_maincopy.png",
+        src: "/images/product/AL3200/AL3200_maincopy.png",
         alt: "AL3200",
       },
       summary: "提供快速模式與一般模式的專業酒精測試儀。",
@@ -1675,6 +1854,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "顯示方式",
           value: "分段顯示器",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/AL3200/AL3200_maincopy.png",
+          alt: "AL3200 主圖",
+        },
+        {
+          src: "/images/product/AL3200/AL3200_subcopy.png",
+          alt: "AL3200 副圖",
         },
       ],
     },
@@ -1726,6 +1915,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "吹嘴",
           value: "無需使用吹嘴",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/EBS/EBS_maincopy.png",
+          alt: "EBS 主圖",
+        },
+        {
+          src: "/images/product/EBS/EBS_subcopy.png",
+          alt: "EBS 副圖",
         },
       ],
     },
@@ -1851,6 +2050,16 @@ export const breathalyzerPageData: ProductListPageData = {
         {
           label: "儲存溫度",
           value: "0°C ~ 50°C",
+        },
+      ],
+      gallery: [
+        {
+          src: "/images/product/EBS010/EBS-010_maincopy.png",
+          alt: "EBS-010 主圖",
+        },
+        {
+          src: "/images/product/EBS010/EBS-010_subcopy.png",
+          alt: "EBS-010 副圖",
         },
       ],
     },
