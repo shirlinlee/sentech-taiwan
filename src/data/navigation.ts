@@ -21,16 +21,11 @@ export const navigation: NavigationItem[] = [
     ],
   },
   {
-    label: "技術支援",
+    label: "諮詢申請",
     href: ROUTES.support.request,
-    children: [
-      { label: "服務請求", href: ROUTES.support.request },
-      { label: "下載中心", href: ROUTES.support.download },
-      { label: "公告", href: ROUTES.support.notice },
-    ],
   },
-  {
-    label: "KOLAS 認證證書",
-    href: ROUTES.certification,
-  },
+  // {
+  //   label: "KOLAS 認證證書",
+  //   href: ROUTES.certification,
+  // },
 ];
