@@ -9,17 +9,5 @@ export type FooterData = {
     label: string;
     email: string;
   };
-  service: {
-    label: string;
-    email: string;
-  };
-  phone: {
-    label: string;
-    value: string;
-  };
-  fax: {
-    label: string;
-    value: string;
-  };
   copyright: string;
 };
