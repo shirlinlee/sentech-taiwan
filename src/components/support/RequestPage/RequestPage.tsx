@@ -349,10 +349,6 @@ export function RequestPage({ data }: RequestPageProps) {
           </div>
 
           <section className={styles.privacy} aria-labelledby="privacy-title">
-            <h2 id="privacy-title" className={styles.privacyTitle}>
-              {privacy.title}
-            </h2>
-
             <div className={styles.privacyBox}>
               <h3 className={styles.privacyHeading}>{privacy.heading}</h3>
               <p>{privacy.intro}</p>
