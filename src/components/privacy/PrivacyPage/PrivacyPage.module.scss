@@ -1,0 +1,59 @@
+@use "../../../styles/variables.scss" as *;
+
+.article {
+  width: 100%;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid $color-accent;
+}
+
+.title {
+  margin: 0;
+  font-size: $font-size-large;
+  font-weight: 700;
+  color: $color-secondary;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.content {
+  max-width: 48rem;
+  padding-bottom: 3rem;
+  font-size: $font-size-medium;
+  line-height: 1.9;
+  color: $color-muted;
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  ul {
+    margin: 0 0 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.sectionTitle {
+  margin: 0 0 1.25rem;
+  font-size: $font-size-large;
+  font-weight: 700;
+  color: $color-secondary;
+}
+
+.heading {
+  margin: 1.75rem 0 0.75rem;
+  font-size: $font-size-medium;
+  font-weight: 700;
+  color: $color-secondary;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}

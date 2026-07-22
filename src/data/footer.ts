@@ -12,5 +12,5 @@ export const footerData: FooterData = {
     label: "詢問",
     email: "tichu.yang@tangent-tech.com",
   },
-  copyright: "© 2022 SENTECHKOREA 版權所有。",
+  copyright: "© 2026 潤貿有限公司版權所有",
 };

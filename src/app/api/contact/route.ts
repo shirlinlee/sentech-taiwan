@@ -71,11 +71,11 @@ export async function POST(request: Request) {
       );
     }
 
-    const receiver = process.env.CONTACT_RECEIVER;
+    const receivers = process.env.CONTACT_RECEIVER?.split(",").map(email => email.trim()) ?? [];
     const from =
       process.env.CONTACT_FROM ?? "SENTECH <onboarding@resend.dev>";
 
-    if (!process.env.RESEND_API_KEY || !receiver) {
+    if (!process.env.RESEND_API_KEY || !receivers) {
       console.error("Missing RESEND_API_KEY or CONTACT_RECEIVER");
       return NextResponse.json(
         { success: false, error: "郵件服務尚未設定完成" },
@@ -87,7 +87,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
         from,
-        to: receiver,
+        to: receivers,
         replyTo: email,
         subject: `[諮詢申請][${categoryLabel}] ${subject}`,
         react: createElement(ContactEmail, {

@@ -1,4 +1,5 @@
 import type { BreadcrumbEntry } from "@/types/page";
+import type { PrivacyPolicyContent } from "@/types/privacy";
 
 export type RequestCategory = "product" | "service";
 
@@ -17,19 +18,6 @@ export type RequestFormFieldLabels = {
   cancel: string;
 };
 
-export type RequestPrivacySection = {
-  title: string;
-  heading: string;
-  intro: string;
-  items: string[];
-  transferTitle: string;
-  transferParagraphs: string[];
-  rightsTitle: string;
-  rightsIntro: string;
-  rights: string[];
-  rightsNote: string;
-};
-
 export type RequestPageData = {
   breadcrumb: BreadcrumbEntry[];
   title: string;
@@ -38,6 +26,6 @@ export type RequestPageData = {
     label: string;
   }[];
   labels: RequestFormFieldLabels;
-  privacy: RequestPrivacySection;
+  privacy: PrivacyPolicyContent;
   successMessage: string;
 };
