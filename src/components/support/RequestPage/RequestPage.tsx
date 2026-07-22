@@ -24,12 +24,12 @@ type RequestFormValues = {
 type RequestFormErrors = Partial<Record<keyof RequestFormValues, string>>;
 
 const initialValues: RequestFormValues = {
-  category: "product",
-  subject: "主旨測試",
-  name: "王小明",
-  email: "abc123@gmail.com",
-  phone: "0912345678",
-  message: "訊息測試",
+  category: "",
+  subject: "",
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
   agreed: false,
 };
 
