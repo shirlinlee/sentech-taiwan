@@ -13,7 +13,7 @@ type FooterProps = {
 
 export function Footer({ data }: FooterProps) {
   const { main: mainLogo } = siteLogos;
-  const { privacy, companyName, address, inquiry, service, phone, fax, copyright } =
+  const { privacy, companyName, address, inquiry, copyright } =
     data;
 
   return (
@@ -21,15 +21,6 @@ export function Footer({ data }: FooterProps) {
       <Container>
         <div className={styles.inner}>
           <div className={styles.info}>
-            {/* <Image
-              src={mainLogo.src}
-              alt={mainLogo.alt}
-              width={mainLogo.width}
-              height={mainLogo.height}
-              className={styles.logo}
-            /> */}
-           
-
             <p className={styles.line}>
               {companyName} {address}
             </p>
@@ -44,20 +35,6 @@ export function Footer({ data }: FooterProps) {
               <span className={styles.separator} aria-hidden="true">
                 {" "}
               </span>
-              <span>
-                {service.label}：
-                <a href={`mailto:${service.email}`} className={styles.link}>
-                  {service.email}
-                </a>
-              </span>
-            </p>
-
-            <p className={styles.line}>
-              {phone.label}：{phone.value}
-              <span className={styles.separator} aria-hidden="true">
-                {" "}
-              </span>
-              {fax.label}：{fax.value}
             </p>
           </div>
 
