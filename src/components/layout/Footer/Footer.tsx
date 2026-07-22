@@ -21,10 +21,12 @@ export function Footer({ data }: FooterProps) {
       <Container>
         <div className={styles.inner}>
           <div className={styles.info}>
+            <b className={styles.line}>
+              {companyName}
+            </b>
             <p className={styles.line}>
-              {companyName} {address}
+              {address}
             </p>
-
             <p className={styles.line}>
               <span>
                 {inquiry.label}：
@@ -32,9 +34,7 @@ export function Footer({ data }: FooterProps) {
                   {inquiry.email}
                 </a>
               </span>
-              <span className={styles.separator} aria-hidden="true">
-                {" "}
-              </span>
+              
             </p>
           </div>
 
