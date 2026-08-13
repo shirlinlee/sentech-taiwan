@@ -12,13 +12,13 @@ export const homePageData: HomePageData = {
     {
       id: "alx3000",
       label: "產品",
-      name: "ALCOSCAN ALX3000",
+      name: "ALCOSCAN ALX3000/P",
       description:
-        "ALX3000 是一款使用燃料電池式酒精感測器的呼氣酒精測試儀，並搭載汽車點火連鎖裝置。安裝 ALX3000 後進入車內時，駕駛必須先進行酒精測試，並依分析結果控制點火。",
+        "ALX3000/P 是一款使用燃料電池式酒精感測器的呼氣酒精測試儀，並搭載汽車點火連鎖裝置。安裝 ALX3000/P 後進入車內時，駕駛必須先進行酒精測試，並依分析結果控制點火。",
       href: ROUTES.products.detail("alx3000"),
       productImage: {
         src: "/images/home/products/sec2_img1.png",
-        alt: "ALCOSCAN ALX3000",
+        alt: "ALCOSCAN ALX3000/P",
       },
       backgroundImage: {
         src: "/images/home/products/sec2_bg1.jpg",

@@ -13,37 +13,41 @@ export const breathalyzerPageData: ProductListPageData = {
     height: 400,
   },
   categories: [
-    { id: "ignition-locking", label: "Ignition Locking Device" },
-    { id: "evidence", label: "Evidence Devices" },
-    { id: "screening", label: "Screening Devices" },
-    { id: "system", label: "System Devices" },
+    { id: "ignition-locking", label: "車輛點火自動鎖定裝置" },
+    { id: "evidence", label: "舉證用酒測器" },
+    { id: "screening", label: "篩檢酒測器" },
+    { id: "system", label: "門禁酒測器" },
   ],
   products: [
     {
       id: "alx3000",
       slug: "alx3000",
-      name: "ALX3000",
+      name: "ALX3000/P",
       categoryId: "ignition-locking",
       image: {
         src: "/images/product/ALX3000/ALX3000_maincopy.png",
-        alt: "ALX3000",
+        alt: "ALX3000/P",
       },
       brand: "ALCOSCAN",
       summary:
-        "ALX3000 是一款使用燃料電池式酒精感測器的呼氣酒精測試儀，並搭載汽車點火連鎖裝置。",
+        "ALX3000/P 是一款使用燃料電池式酒精感測器的呼氣酒精測試儀，並搭載汽車點火連鎖裝置。",
       description: [
-        "ALX3000 是一款使用燃料電池式酒精感測器的呼氣酒精測試儀，並搭載汽車點火連鎖裝置。",
-        "安裝 ALX3000 後，駕駛在進入車內時必須先進行酒精測試，並依分析結果控制點火。",
-        "與以往的點火連鎖裝置不同，ALX3000 的價格更合理。",
+        "ALX3000/P 是一款使用燃料電池式酒精感測器的呼氣酒精測試儀，並搭載汽車點火連鎖裝置。",
+        "安裝 ALX3000/P 後，駕駛在進入車內時必須先進行酒精測試，並依分析結果控制點火。",
+        "與以往的點火連鎖裝置不同，ALX3000/P 的價格更合理。",
       ],
       gallery: [
         {
           src: "/images/product/ALX3000/ALX3000_maincopy.png",
-          alt: "ALX3000 主圖",
+          alt: "ALX3000/P 主圖",
         },
         {
           src: "/images/product/ALX3000/ALX3000_subcopy.png",
-          alt: "ALX3000 副圖",
+          alt: "ALX3000/P 副圖",
+        },
+        {
+          src: "/images/product/ALX3000/ALX3000_followup.jpg",
+          alt: "ALX3000/P 副圖",
         },
       ],
       specifications: [

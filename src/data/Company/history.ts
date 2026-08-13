@@ -33,7 +33,7 @@ export const historyPageData: HistoryPageData = {
       events: [
         { id: "2019-09", date: "2019.09", description: "在亞美尼亞葉里溫舉行第 8 屆 EU 會議" },
         { id: "2019-06", date: "2019.06", description: "被韓國政府中小企業與新創部指定為小巨人企業。" },
-        { id: "2019-05", date: "2019.05", description: "獲得全球巨人企業認證。ALCOSCAN ALX3000 通過 EN50436-1、EN50436-2 認證。" },
+        { id: "2019-05", date: "2019.05", description: "獲得全球巨人企業認證。ALCOSCAN ALX3000/P 通過 EN50436-1、EN50436-2 認證。" },
         { id: "2018-11", date: "2018.11", description: "在美國設立洛杉磯分公司" },
         { id: "2018-09", date: "2018.09", description: "在首爾舉行第 7 屆會議；取得 IATF16949" },
         { id: "2018-07", date: "2018.07", description: "SENTECH KOREA CORP. 成立 20 週年" },
